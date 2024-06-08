@@ -1,0 +1,184 @@
+:root {
+  --dark: #313638;
+  --light: #E8E9EB;
+  --accent: #EF6461;
+  --smh: #E7A063;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat";
+}
+body {
+  background-color: var(--dark);
+}
+nav {
+  width: 90%;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  color: var(--light);
+}
+.logo {
+  text-align: center;
+  /* font-size: 1.2rem; */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 1000;
+}
+.logoDescription {
+  font-size: .9rem;
+  text-transform: lowercase;
+  font-weight: 400;
+
+}
+.list {
+  width: 50%;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+
+}
+.listElement {
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--light);
+  transition: .2s ease-in-out;
+  padding: 4px 10px;
+  z-index: 1;
+  overflow: hidden;
+}
+.listElement::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: var(--smh);
+  left: -100%;
+  top: 0;
+  z-index: -1;
+  transition: transform .1s ease;
+}
+.listElement:hover::after{
+  transform: translateX(100%);
+  
+}
+.listElement:hover {
+  color: white;
+}
+.cart {
+  background-color: transparent;
+  width: 50px;
+  height: 50px;
+  font-size: 1.2rem;
+  background-color: var(--dark);
+  border-radius: 50%;
+  border: 1px solid var(--light);
+  cursor: pointer;
+}
+.cart:hover {
+  background-color: var(--smh);
+}
+
+.link--active {
+  /* border-bottom: 1px solid black;bac */
+  background-color: var(--accent);
+  
+}
+
+
+/* main page css below */
+
+.homePage {
+  width: 100%;
+  height: 190vh;
+  background: linear-gradient(0deg, #E8E9EB, #313638);
+}
+.heroText {
+  position: relative;
+  width: 90%;
+  height: 90vh;
+  margin: 0 auto;
+  font-size: 10rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #E8E9EB;
+}
+.heroDescription {
+  position: absolute;
+  font-size: 4rem;
+  left:0;
+
+
+}
+.heroLogo {
+  position: relative;
+}
+.heroLogo::after {
+  position: absolute;
+  content: "sneaker head";
+  left: 0;
+  top: 100%;
+  font-size: 12rem;
+  width: 100%;
+  height: 100%;
+  color: rgba(0, 0, 0, 0.598);
+  text-align: end;
+}
+.offer {
+  color: var(--smh);
+}
+.outerCarousel {
+  position: relative;
+  width: 600px;
+  height: 600px;
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 10px 24px 0px rgba(66, 68, 90, 1);
+  -moz-box-shadow: 0px 10px 24px 0px rgba(66, 68, 90, 1);
+  box-shadow: 0px 10px 24px 0px rgba(66, 68, 90, 1);
+}
+.carousel {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  transition: transform .1s ease;
+  
+}
+.carousel img {
+  object-fit: cover;
+  min-width: 100%;
+  height: 100%;
+  display: block;
+}
+.carouselBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  border:none;
+  cursor: pointer;
+  background-color: var(--light);
+  font-weight: 1000;
+  z-index: 1;
+}
+.nextBtn {
+  right: 20px;
+}
+.prevBtn {
+  left: 20px;
+}

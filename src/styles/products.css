@@ -1,0 +1,103 @@
+
+.productsPage {
+    background: linear-gradient(0deg, #E8E9EB, #313638);
+    min-height: 100vh;
+}.searchBar {
+     width: 90%;
+     display: flex;
+     
+    height: 10vh;
+    margin: 0 auto;
+}
+.searchBar input {
+    height: 50px;
+    width: 300px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    border: none;
+    padding:0 5px;
+
+}
+.searchBar input::placeholder {
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+.searchBar button {
+    width: 100px;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+    transition: background-color .1s ease;
+
+}
+.searchBar button:hover {
+    background-color: var(--smh);
+}
+.ProductsShowcase {
+    width: 90%;
+    min-height: 80vh;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+}
+.product {
+    position: relative;
+    background-color: green;
+    border-radius: 20px;
+    width: 100%;overflow: hidden;
+    height: 300px;
+    cursor: pointer;
+    
+  -webkit-box-shadow: 0px 10px 14px 0px rgb(0, 0, 0);
+  -moz-box-shadow: 0px 10px 14px 0px rgba(66, 68, 90, 1);
+  box-shadow: 0px 10px 14px 0px rgb(0, 0, 0);
+}
+.product img:hover {
+    transform: scale(1.1);
+}
+.descriptionBox {
+    position: absolute;
+    padding: 10px;
+    bottom: 0;
+    width: 100%;
+    height: 20%;
+    color: var(--light);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, .5);
+    border-radius: 0 0 20px 20px;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+.product img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    display: block;
+    border-radius: 20px;
+    transition: .1s ease-in-out;
+}
+.addBtn {
+    padding:10px 20px;
+    margin: 0 10px;
+    border-radius: 10px;
+    background-color: var(--accent);
+    border: none;
+    color: var(--light);
+    cursor: pointer;
+    transition: transform .1s ease-in-out;
+}
+.addBtn:hover {
+    transform: scale(1.1);
+}
+.searchBtn {
+    background-color: var(--accent);
+}
+.price {
+    color: var(--smh);
+}
